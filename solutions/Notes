@@ -1,0 +1,55 @@
+Day 0
+    Git Bash
+        cd /c/Users/30-Days-Of-React
+        clone your fork
+            git clone git@github.com:username/30-Days-Of-React.git
+        create a new branch
+            git checkout -b 'name of branch'
+
+
+
+
+Day 1
+    1. Variables
+        - var, let and const difference:
+            - https://www.developer.com/languages/javascript/javascript-var-let-const-variable-declaration/
+            - var is not used much anymore
+            - var is function scoped
+            - let and const is block scoped
+            - const should be used when variable doesn't need to be changed
+            - const object cannot be updated, the properties of this objects can be updated
+            - var variables can be updated and re-declared within its scope
+            - let variables can be updated but not re-declared
+            - const variables can neither be updated nor re-declared
+            - They are all hoisted to the top of their scope. But while var variables are initialized with undefined, let and const variables are not initialized
+            - While var and let can be declared without being initialized, const must be initialized during declaration
+    3. Arrays
+        - You can create arrays the following two ways
+            - const arr = Array()
+            - const arr = [] 
+                - This is the recomended way to create empty arrays
+            - 'array name' .length will give number of items in array
+            - .split( ) splits strings into an array of items
+            - to get last item in array type 'array name'.length - 1
+            - Array() = creates an empty array
+            - fill() = fills array with static elements
+                - for example Array(8),fill('X') creates an array with 8 X's
+            - concat() = combines two arrays
+                - array you want to appear first .concat(array you want to appear after first)
+            - indexOf() = checks if an item exists if it does it returns where it is within the array. If it doesn't it returns -1
+            - lastIndexOf() = it gives the position of the last time the item is in the array
+            - includes() = checks if item exists in array // boolean
+            - isArray() = checks if the data type is an array // boolean
+            - toString() = converts to string
+            - join() = will convert the array to string with the inputed parameter as the connector
+            - slice() = create an array with a part of another array
+            - splice() = It takes three parameters:Starting position, number of times to be removed and number of items to be added.
+            - Push() = add an item to the end of an array
+            - pop() = remove an item at the end of an array
+            - shift() = remove an item at the beginning of an array
+            - unshift() = add an item to the beginning of an array
+            - reverse() = reverse array
+            - sort() = sort array into alphabetical order
+            - you can store arrays within arrays.
+
+
