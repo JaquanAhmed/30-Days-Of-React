@@ -1,10 +1,20 @@
 Day 0
     Git Bash
-        cd /c/Users/30-Days-Of-React
+        Configure username and email
+            git config --global user.name "Your name here"
+            git config --global user.email "your_email@example.com"
+        cd /c/Users/JAhmed/30-Days-Of-React
         clone your fork
             git clone git@github.com:username/30-Days-Of-React.git
         create a new branch
             git checkout -b 'name of branch'
+        Structure Files in Git
+            mkdir -p solutions/day-01
+            touch solutions/day-01/level1.js
+        Commit Excersice solutions
+            git add solutions/day-01/level1.js
+            git commit -m "chore: exercise level1 complete"
+            git push origin exercise-solutions # branch `exercise-solutions` was created earlier
 
 
 
