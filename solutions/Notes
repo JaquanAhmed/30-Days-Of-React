@@ -12,8 +12,8 @@ Day 0
             mkdir -p solutions/day-01
             touch solutions/day-01/level1.js
         Commit Excersice solutions
-            git add solutions/day-01/level1.js
-            git commit -m "chore: exercise level1 complete"
+            git add solutions\day-01\Variables\level1
+            git commit -m "exercise level1 complete"
             git push origin exercise-solutions # branch `exercise-solutions` was created earlier
 
 
@@ -61,5 +61,10 @@ Day 1
             - reverse() = reverse array
             - sort() = sort array into alphabetical order
             - you can store arrays within arrays.
+            - Remove Punctuation from string
+                - replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")
+                - If their are crazy spaces between words because of the removed Punctuation.
+                    - replace(/\s{2,}/g," ");
+            
 
 
