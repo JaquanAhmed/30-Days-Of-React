@@ -27,4 +27,23 @@ console.log('range: '+ range);
 //Compare the value of (min - average) and (max - average), use abs() method
 console.log(Math.abs(min - average));
 console.log(Math.abs(max - average));
-
+//Slice the first ten countries from the countries array
+const f10c = countries.slice(0, 10);
+console.log(f10c);
+//Find the middle country(ies) in the countries array
+if (typeof (countries[(countries.length - 1)/2])  == 'undefined'){
+    console.log (countries[(countries.length-2)/2], countries[(countries.length)/2]);
+} else{
+    console.log (countries[(countries.length-1)/2]);
+}
+//Divide the countries array into two equal arrays if it is even. If countries array is not even , one more country for the first half.
+console.log(countries);
+if (typeof (countries[(countries.length-1)/2]) == 'undefined'){
+    var countriesp1 = countries.slice(0, (countries.length/2));
+    var countriesp2 = countries.slice((countries.length/2), countries.length);
+}else{
+    var countriesp1 = countries.slice(0, (countries.length/2)+1);
+    var countriesp2 = countries.slice((countries.length/2)+1, countries.length);
+}
+console.log(countriesp1);
+console.log(countriesp2);
