@@ -34,6 +34,11 @@ if (a>b){
     : console.log(b + " is greater than " + a)
 
 //Even numbers are divisible by 2 and the remainder is zero. How do you check, if a number is even or not using JavaScript?
-let inputedNumber = document.getElementById("iNumber").value;
-(inputedNumber / 2 == )
+let isEven = () => {
+    let inputedNumber = document.getElementById("iNumber").value;
+    console.log(inputedNumber % 2);
+    (inputedNumber % 2 == 0)
+        ? alert(inputedNumber + " is an even number")
+        : alert(inputedNumber + " is an odd number")
+}
 
