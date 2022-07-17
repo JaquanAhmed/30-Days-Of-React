@@ -33,6 +33,7 @@ Day 1
             - const variables can neither be updated nor re-declared
             - They are all hoisted to the top of their scope. But while var variables are initialized with undefined, let and const variables are not initialized
             - While var and let can be declared without being initialized, const must be initialized during declaration
+
     3. Arrays
         - You can create arrays the following two ways
             - const arr = Array()
@@ -70,6 +71,7 @@ Day 1
             - import using import { name of variable } from "./file.js";
                 -add more . before / to go back more folders
         - to check if variable is undefined use typeof
+
     4. Conditions
         - Conditions can be implementing using the following ways:
                 - if
@@ -84,8 +86,19 @@ Day 1
         - Ternary operator is very common in React
             - It is a short way to write if else statement.
             
-            
+    5. Loops
+        - Regular for loop can be used anywhere when the number of iteration is known.
+        - While loop when the number of iteration is not know
+        - Do while loop and while loop are almost the same but do while loop run at least once even when the condition is false
+        - 'for of' used like java for each
+            - used to iterate through arrays
+        - 'for each' is similar to 'for of' but you need to also define the index number as well as the array itself sometimes
+        - 'for in' is used for objects
 
-            
+    6. Scope
+        - Variable scopes can be:
+            - Windowed
+            - Global
+            - Local
 
 
