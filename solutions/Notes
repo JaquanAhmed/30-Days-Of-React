@@ -99,6 +99,42 @@ Day 1
         - Variable scopes can be:
             - Windowed
             - Global
+                - visible by everything
             - Local
+                - Function - visible within a function (and its sub-functions and blocks)
+                - Block - visible within a block (and its sub-blocks)
+                - Module - visible within a module
+
+    7. Object
+        - To create an object you have to make it equal to {}
+            - const person = {}
+            - To create an object with values put the values within the curly brackets
+                # - const person = { 
+                #     firstname : 'Jaquan', 
+                #     surname : 'Ahmed'
+                #     } 
+            - You can add more values to an object after it has been created
+                - person.nationality = 'Ethiopian'
+                - person.country = 'Finland'
+                - person.title = 'teacher'
+                - person.skills.push('Meteor')
+                - person.skills.push('SasS')
+                - person.isMarried = true
+        - You can get values from an object using . followed by key name if the key-name is a one word as well as using square bracket and a quote
+            - console.log(person.firstName)
+            - or console.log(person['firstName'])
+        - You can create functions as object values
+            - You can use the word 'this' to access the values of different properties of the object
+                - this.firstname
+            - We can not use an arrow function as object method because the word this refers to the window inside an arrow function instead of the object itself
+        - Object Methods
+            - Object.assign: To copy an object without modifying the original object
+            - Object.keys: To get the keys or properties of an object as an array
+            - Object.values: To get values of an object as an array
+            - Object.entries: To get the keys and values in an array
+            - hasOwnProperty: To check if a specific key or property exist in an object
+            
+        
+        
 
 
