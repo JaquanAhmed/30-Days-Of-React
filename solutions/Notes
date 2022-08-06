@@ -85,6 +85,7 @@ Day 1
             - The default block runs if all the cases don't satisfy the condition.
         - Ternary operator is very common in React
             - It is a short way to write if else statement.
+            - a condition followed by a question mark (?), then an expression to execute if the condition is truthy followed by a colon (:), and finally the expression to execute if the condition is falsy.                
             
     5. Loops
         - Regular for loop can be used anywhere when the number of iteration is known.
@@ -133,7 +134,64 @@ Day 1
             - Object.values: To get values of an object as an array
             - Object.entries: To get the keys and values in an array
             - hasOwnProperty: To check if a specific key or property exist in an object
+    
+    8. Functions
+        -A function can be declared or created in couple of ways:
+            - Declaration function
+                - functions can be created like this
+                    - function functionName() {}
+                - and called like this
+                    - functionName()
+            - Expression function
+                - Expression functions are anonymous functions. After we create a function without a name and we assign it to a variable. 
+                  To return a value from the function we should call the variable.
+                - expression functions can be created like this
+                    - const square = function (n) {}
+            - Anonymous function
+                - const anonymousFun = function () { 
+                    console.log('I am an anonymous function and my value is stored in anonymousFun')
+                    }
+                - An anonymous function is a function without a function name. Only function expressions can be anonymous, function declarations must have a name.
+            - Arrow function
+                - Arrow function is an alternative to write a function, however function declaration and arrow function have some minor differences.
+                    - An arrow function can be created like this
+                        - const square = (n) => {}
+            - Self invoking function
+                - Self invoking functions are anonymous functions which do not need to be called to return a value.
+                - Function expressions will execute automatically if the expression is followed by ().
+                - You cannot self-invoke a function declaration.
+                - You have to add parentheses around the function to indicate that it is a function expression:
+                    - (function () { let x = "Hello!!";  // I will invoke myself })();
+            - Function with unlimited number of parameters
+                - Unlimited number of parameters in a regular function
+                    - function sumAllNums() {
+                        console.log(arguments)
+                       }
+                    - function sumAllNums() {
+                        let sum = 0
+                        for (let i = 0; i < arguments.length; i++) {
+                          sum += arguments[i]
+                        }
+                        return sum
+                      }
+                - Unlimited number of parameters in an arrow function
+                    - const sumAllNums = (...args) => {
+                        let sum = 0
+                        for (const element of args) {
+                          sum += element
+                        }
+                        return sum
+                      }
+            - Function with default parameters
+                - Sometimes we pass default values to parameters, when we invoke the function if we do not pass an argument the default value will be used. Both function declaration and arrow function can have a default value or values.
+                    - example:
+                        - function functionName(param = value) {}
+
+
+                
             
+                
+
         
         
 
