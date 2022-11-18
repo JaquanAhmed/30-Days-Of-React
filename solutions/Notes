@@ -369,8 +369,336 @@ Day 1
     11. Functional Programming
         - Functional programming allows you to write shorter code, clean code, and also to solve complicated problems which might be difficult to solve in a traditional way.
         - forEach
-            - 
+            - We use forEach when we like to iterate through an array of items.
+            - The forEach is a higher-order function and it takes call-back as a parameter. 
+            - The forEach method is used only with array and we use forEach if you are interested in each item or index or both.
+                - example 1
+                    function callback(item, index, arr) {}
+                    array.forEach(callback)
+                - example 2
+                    const countries = ['Finland', 'Estonia', 'Sweden', 'Norway']
+                    countries.forEach(function (country, index, arr) {
+                    console.log(i, country.toUpperCase())
+                    })
+                - example 3 / If there is not much code inside the code block we can use an arrow function and we can write it without a curly bracket.
+                    const countries = ['Finland', 'Estonia', 'Sweden', 'Norway']
+                    countries.forEach((country, i) => console.log(i, country.toUpperCase()))
+                    0 "FINLAND"
+                    1 "ESTONIA"
+                    2 "SWEDEN"
+                    3 "NORWAY"
+        - map
+            - We use the map method whenever we like to modify an array. 
+            - We use the map method only with arrays and it always returns an array.
+                // Using function declaration
+                    const countries = ['Finland', 'Estonia', 'Sweden', 'Norway'] 
+                    const newCountries = countries.map(function (country) {
+                    return country.toUpperCase()})
+                    console.log(newCountries)
+                // map using an arrow function call back
+                    const countries = ['Finland', 'Estonia', 'Sweden', 'Norway']
+                    const newCountries = countries.map((country) => country.toUpperCase())
+                    console.log(newCountries) // ["FINLAND", "ESTONIA", "SWEDEN", "NORWAY"]
+        - filter
+            - The filter method like forEach and map is used with an array and it returns an array of the filtered items.
+                - example 1
+                    const countries = ['Finland', 'Estonia', 'Sweden', 'Norway', 'Iceland']
+                    const countriesWithLand = countries.filter((country) =>
+                    country.includes('land'))
+                    console.log(countriesWithLand) // ["Finland", "Iceland"]
+                - example 2
+                    const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                    const evens = numbers.filter((n) => n % 2 === 0)
+                    const odds = numbers.filter((n) => n % 2 !== 0)
+                    console.log(evens) // [0, 2, 4, 6, 8, 10]
+                    console.log(odds) // [1, 3, 5, 7, 9]
+        - reduce
+            - We use the reduce method to sum all numbers in an array together, or to multiply items in an array or to concatenate items in an array.
+                - example 1
+                    const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                    const sum = numbers.reduce((acc, cur) => acc + cur)
+                    console.log(sum) // 55
+                - example 2
+                    const strs = ['Hello', 'world', '!']
+                    const helloWorld = strs.reduce((acc, cur) => acc + ' ' + cur)
+                    console.log(helloWorld) // "Hello world !"
+                - example 3 / makes the initial value 10 / The initial value by default is 0
+                    const numbers = [1, 2, 3, 4, 5]
+                    const value = numbers.reduce((acc, cur) => acc * cur, 10)
+                    console.log(value) // 1200
+        - find
+            - If we are interested in the FIRST occurrence of a certain item or element in an array we can use find method
+                - example 1
+                    const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                    const firstEvenNum = numbers.find((n) => n % 2 === 0)
+                    const firstOddNum = numbers.find((n) => n % 2 !== 0)
+                    console.log(firstEvenNum) // 0
+                    console.log(firstOddNum) // 1
+                - example 2
+                    const countries = ['Finland', 'Estonia', 'Sweden', 'Norway', 'Iceland']
+                    const index = countries.find((country) => country.includes('o'))
+                    console.log(index // Estonia
+        - findIndex
+            - The findIndex method works like find but findIndex returns the index of the item.
+                const countries = ['Finland', 'Estonia', 'Sweden', 'Norway', 'Iceland']
+                const index = countries.findIndex((country) => country.length === 6)
+                console.log(index //2
+        - some
+            - The some method is used with array and return a boolean.
+            - If one or some of the items satisfy the criteria the result will be true else it will be false.
+                const evens = [0, 2, 4, 6, 8, 10]
+                const someAreEvens = evens.some((n) => n % 2 === 0)
+                const someAreOdds = evens.some((n) => n % 2 !== 0)
+                console.log(someAreEvens) // true
+                console.log(someAreOdds) // false
+        - every
+            - The method every is somehow similar to some but every item must satisfy the criteria.
+                const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                const allAreEvens = numbers.every((n) => n % 2 === 0)
+                const allAreOdd s= numbers.every((n) => n % 2 !== 0)
+                
+                console.log(allAreEven) // false
+                console.log(allAreOdd)  // false
 
+    12. Classes
+        - JavaScript is an object oriented programming language. Everything in JavScript is an object, with its properties and methods.
+        - We create class to create an object. A Class is like an object constructor, or a "blueprint" for creating objects.
+        - The class defines attributes and the behavior of the object, while the object, on the other hand, represents the class.
+            class Person {
+                // code goes here
+            }
+            const person = new Person()
+            console.log(person)
+            Person {}
+        - Class Constructor
+            - The constructor is a builtin function which allows as to create a blueprint for our object.
+                class Person {
+                    constructor(firstName, lastName) {
+                      this.firstName = firstName
+                      this.lastName = lastName
+                    }
+                  } 
+                const person1 = new Person('Asabeneh', 'Yetayeh')
+                console.log(person1)
+                Person {firstName: "Asabeneh", lastName: "Yetayeh"}
+            - Default values with constructor
+                class Person {
+                    constructor(
+                    firstName = 'Asabeneh',
+                    lastName = 'Yetayeh',
+                    age = 250,
+                    country = 'Finland',
+                    city = 'Helsinki'
+                    ) {
+                    this.firstName = firstName
+                    this.lastName = lastName
+                    this.age = age
+                    this.country = country
+                    this.city = city
+                    }
+                }
+                const person1 = new Person() // it will take the default values
+                const person2 = new Person('Lidiya', 'Tekle', 28, 'Finland', 'Espoo')
+                console.log(person1)
+                console.log(person2)
+                Person {firstName: "Asabeneh", lastName: "Yetayeh", age: 250, country: "Finland", city: "Helsinki"}
+                Person {firstName: "Lidiya", lastName: "Tekle", age: 28, country: "Finland", city: "Espoo"}
+        - Class methods
+            - The constructor inside a class is a builtin function which allow us to create a blueprint for the object.
+            - In a class we can create class methods.
+            - Methods are JavaScript functions inside the class.
+                class Person {
+                    constructor(firstName, lastName, age, country, city) {
+                    this.firstName = firstName
+                    this.lastName = lastName
+                    this.age = age
+                    this.country = country
+                    this.city = city
+                    }
+                    getFullName() {
+                    const fullName = this.firstName + ' ' + this.lastName
+                    return fullName
+                    }
+                }
+                const person1 = new Person('Asabeneh', 'Yetayeh', 250, 'Finland', 'Helsinki')
+                console.log(person1.getFullName())
+                Asabeneh Yetayeh
+        - Properties with initial value
+            - When we create a class for some properties we may have an initial value. 
+            - For instance if you are playing a game, you starting score will be zero.
+            - So, we may have a starting score or score which is zero.
+                class Person {
+                    constructor(firstName, lastName, age, country, city) {
+                    this.firstName = firstName
+                    this.lastName = lastName
+                    this.age = age
+                    this.country = country
+                    this.city = city
+                    this.score = 0
+                    this.skills = []
+                    }
+                }
+                const person1 = new Person('Asabeneh', 'Yetayeh', 250, 'Finland', 'Helsinki')
+                console.log(person1.score)
+                console.log(person1.skills)
+                0
+                []
+        - getter
+            - The get method allow us to access value from the object.
+            - We write a get method using keyword get followed by a function.
+            - Instead of accessing properties directly from the object we use getter to get the value. 
+                class Person {
+                    constructor(firstName, lastName, age, country, city) {
+                    this.firstName = firstName
+                    this.lastName = lastName
+                    this.age = age
+                    this.country = country
+                    this.city = city
+                    this.score = 0
+                    this.skills = []
+                    }
+                    get getScore() {
+                        return this.score
+                    }
+                    get getSkills() {
+                        return this.skills
+                    }
+                }
+                const person1 = new Person('Asabeneh', 'Yetayeh', 250, 'Finland', 'Helsinki')
+                console.log(person1.getScore) // We do not need parenthesis to call a getter method
+                console.log(person1.getSkills)
+                0
+                []
+        - setter
+            - The setter method allow us to modify the value of certain properties.
+            - We write a setter method using keyword set followed by a function.
+                class Person {
+                    constructor(firstName, lastName, age, country, city) {
+                    this.firstName = firstName
+                    this.lastName = lastName
+                    this.age = age
+                    this.country = country
+                    this.city = city
+                    this.score = 0
+                    this.skills = []
+                    }
+                    set setScore(score) {
+                        this.score += score
+                    }
+                    set setSkill(skill) {
+                        this.skills.push(skill)
+                    }
+                }
+                person1.setScore = 1
+                person1.setSkill = 'HTML'
+                person1.setSkill = 'CSS'
+                person1.setSkill = 'JavaScript'
+                console.log(person1.score)
+                console.log(person2.score)
+                1
+                ["HTML", "CSS", "JavaScript"]
+        - Static method
+            - The static keyword defines a static method for a class. Static methods are not called on instances of the class. Instead, they are called on the class itself. 
+            - These are often utility functions, such as functions to create or clone objects. An example of static method is Date.now(). The now method is called directly from the class.
+                class Person {
+                    constructor(firstName, lastName, age, country, city) {
+                    this.firstName = firstName
+                    this.lastName = lastName
+                    this.age = age
+                    this.country = country
+                    this.city = city
+                    this.score = 0
+                    this.skills = []
+                    }
+                    // gets random array from array
+                    static favoriteSkill(){
+                        const skills = ['HTML', 'CSS', 'JS', 'React', 'Python', 'Node']
+                        const index = Math.floor(Math.random() * skills.length)
+                        return skills[index]
+                    }
+                    // get the current date and time
+                    static showDateTime() {
+                    let now = new Date()
+                    let year = now.getFullYear()
+                    let month = now.getMonth() + 1
+                    let date = now.getDate()
+                    let hours = now.getHours()
+                    let minutes = now.getMinutes()
+                    if (hours < 10) {
+                        hours = '0' + hours
+                    }
+                    if (minutes < 10) {
+                        minutes = '0' + minutes
+                    }
+                    let dateMonthYear = date + '.' + month + '.' + year
+                    let time = hours + ':' + minutes
+                    let fullTime = dateMonthYear + ' ' + time
+                    return fullTime
+                    }
+                }
+                console.log(Person.favoriteSkill())
+                console.log(Person.showDateTime())
+                Node
+                17.11.2022 23:52
+        - Inheritance
+            - Using inheritance we can access all the properties and the methods of the parent class.
+            - This reduces repetition of code. 
+            - If you remember, we have a Person parent class and we will create children from it. Our children class could be student, teach etc.
+                class Student extends Person {
+                    saySomething() {
+                    console.log('I am a child of the person class')
+                    }
+                }
+                const s1 = new Student('Asabeneh', 'Yetayeh', 'Finland', 250, 'Helsinki')
+                console.log(s1)
+                console.log(s1.saySomething())
+                console.log(s1.getFullName())
+                Student {firstName: "Asabeneh", lastName: "Yetayeh", age: "Finland", country: 250, city: "Helsinki", …}
+                I am a child of the person class
+                Asabeneh Yetayeh
+        - Overriding methods
+            - As you can see, we manage to access all the methods in the Person Class and we used it in the Student child class. 
+            - We can customize the parent methods, we can add additional properties to a child class.
+            - If we want to customize, the methods and if we want to add extra properties, we need to use the constructor function the child class too.
+            - In side the constructor function we call the super() function to access all the properties from the parent class. 
+            - The Person class didn't have gender but now let us give gender property for the child class, Student. 
+            - If the same method name used in the child class, the parent method will be overridden.
+                class Student extends Person {
+                    constructor(firstName, lastName, age, country, city, gender) {
+                    super(firstName, lastName, age, country, city)
+                    this.gender = gender
+                    }
+                    getPersonInfo() {
+                        let fullName = this.getFullName()
+                        let skills =
+                            this.skills.length > 0 &&
+                            this.skills.slice(0, this.skills.length - 1).join(', ') +
+                            ` and ${this.skills[this.skills.length - 1]}`
+                    
+                        let formattedSkills = skills ? `He knows ${skills}` : ''
+                        let pronoun = this.gender == 'Male' ? 'He' : 'She'
+                    
+                        let info = `${fullName} is ${this.age}. ${pronoun} lives in ${this.city}, ${this.country}. ${formattedSkills}`
+                        return info
+                    }
+                }
+                const s1 = new Student('Asabeneh','Yetayeh',250,'Finland','Helsinki','Male')
+                console.log(s1)
+                console.log(s1.saySomething())
+                console.log(s1.getFullName())
+                console.log(s1.getPersonInfo())
+                Student {firstName: "Asabeneh", lastName: "Yetayeh", age: 250, country: "Finland", city: "Helsinki", …}
+                I am a child of the person class
+                Asabeneh Yetayeh
+                Asabeneh Yetayeh is 250. He lives in Helsinki, Finland. He knows HTML, CSS and JavaScript
+
+    13 Document Object Model(DOM)
+        - HTML document is structured as a JavaScript Object. E
+        - very HTML element has a different properties which can help us to manipulate it. 
+        - It is possible to get, create, append or remove HTML elements using JavaScript.
+        - In React we do not directly manipulate the DOM instead, React Virtual DOM will take care of update all necessary changes.
+        - The only place we directly touch the DOM is here at the index.html. 
+        - React is a single page application because all the components will be rendered on the index.html page and there will not be any other HTML in the entire React Application.
 
                         
 
