@@ -416,15 +416,15 @@ Day 1
             - We use the reduce method to sum all numbers in an array together, or to multiply items in an array or to concatenate items in an array.
                 - example 1
                     const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-                    const sum = numbers.reduce((acc, cur) => acc + cur)
+                    const sum = numbers.reduce((total, currentItem) => total + currentValue)
                     console.log(sum) // 55
                 - example 2
                     const strs = ['Hello', 'world', '!']
-                    const helloWorld = strs.reduce((acc, cur) => acc + ' ' + cur)
+                    const helloWorld = strs.reduce((all, cur) => all + ' ' + cur)
                     console.log(helloWorld) // "Hello world !"
                 - example 3 / makes the initial value 10 / The initial value by default is 0
                     const numbers = [1, 2, 3, 4, 5]
-                    const value = numbers.reduce((acc, cur) => acc * cur, 10)
+                    const value = numbers.reduce((all, cur) => all * cur, 10)
                     console.log(value) // 1200
         - find
             - If we are interested in the FIRST occurrence of a certain item or element in an array we can use find method
