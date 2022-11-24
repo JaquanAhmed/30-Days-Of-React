@@ -13,8 +13,8 @@ Day 0
             mkdir -p solutions/day-01
             touch solutions/day-01/level1.js
         Commit Exercice solutions
-            git add solutions/day-01/Arrays/level2
-            git commit -m "exercise level1 complete"
+            git add relative path with /
+            git commit -m "exercise complete"
             git push origin exercise-solutions # branch `exercise-solutions` was created earlier
         Get Up to date exercise soluions
             git pull origin exercise-solutions
@@ -66,6 +66,14 @@ Day 1
         - unshift() = add an item to the beginning of an array
         - reverse() = reverse array
         - sort() = sort array into alphabetical order
+            - Normally just using sort() is fine.
+            - The function that you pass tells it how to sort the elements. 
+            - It takes two parameters (a and b) that represent any two elements from the array. 
+            - How the elements will be sorted depends on the function’s return value:
+                - if it returns a negative value, the value in a will be ordered before b.
+                - if it returns 0, the ordering of a and b won’t change.
+                - if it returns a positive value, the value in b will be ordered before a.
+                - When you pass the function (a, b) => a - b, you’re telling the .sort() function to sort the numbers in ascending order.
         - you can store arrays within arrays.
         - Remove Punctuation from string
             - replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")
@@ -700,6 +708,56 @@ Day 1
         - The only place we directly touch the DOM is here at the index.html. 
         - React is a single page application because all the components will be rendered on the index.html page and there will not be any other HTML in the entire React Application.
 
+
+
+
+Day 2
+    1. What is React?
+        - React was released in May 2013
+        - React was created by Facebook
+        - React is a JavaScript library for building user interfaces
+        - React is used to build single page applications - An application which has only one HTML page.
+        - React allows us to create reusable UI components
+        - When we work with React we do not interact directly with the DOM
+        - The DOM manipulation job is done by the React virtual DOM
+        - React official documentation
+            - https://reactjs.org/docs/getting-started.html
+
+    2. Why React?
+        - React is used for the following reasons.
+            - fast
+            - modular
+            - scalable
+            - flexible
+            - big community and popular
+            - open source
+            - High job opportunity
+
+    3. JSX
+        - JSX allows us to write HTML elements with JavaScript code.
+        - JSX will be converted to JavaScript on browser using a transpiler - babel.js
+            - Babel is a library which transpiles JSX to pure JavaScript and latest JavaScript to older version.
+        - We don't need to use quotes with JSX
+        - Every HTML element should be wrapped by an outer HTML element to create a valid JSX element.
+        - JSX element could be a single HTML element or many HTML elements wrapped in a parent HTML element.
+            - Example 1
+                const jsxElement = <h1>I am a JSX element</h1> // JS with HTML
+            - Example 2
+                const header = (
+                    <header>
+                    <h1>Welcome to 30 Days Of React</h1>
+                    <h2>Getting Started React</h2>
+                    <h3>JavaScript Library</h3>
+                    <p>Asabeneh Yetayeh</p>
+                    <small>Oct 2, 2020</small>
+                    </header>
+                )
+                //Without the header HTML element or any other parent HTML element the above JSX is invalid
+        - To render a JSX element to HTML document, we should first create an index HTML. 
+        - We can get started with React in two ways
+            - by using CDN
+            - by using create-react-app
+                - The create-react-app creates a React project boilerplate outbox.
                         
 
 
