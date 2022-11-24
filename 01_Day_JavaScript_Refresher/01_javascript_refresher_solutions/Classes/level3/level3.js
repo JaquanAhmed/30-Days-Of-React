@@ -96,7 +96,7 @@ class Statistics {
         Object.entries(h).forEach(([key, val]) => {
             fd.push([((val/this.count())*100).toFixed(1), key]);
             fd.sort((a, b) => {
-                return b[0] - a[0];
+                return a[0] == b[0] ? b[1] - a[1] : b[0] - a[0];
             });
         });
         return fd;
