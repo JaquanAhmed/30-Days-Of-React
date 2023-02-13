@@ -796,6 +796,9 @@ Day 2
             - Example of inserting an array you want listed.
                 const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>)
 
+
+
+                
 Day 3
     1. Setting Up
         - Node
@@ -841,7 +844,20 @@ Day 3
             - ESLint
             - Bracket Pair Colorizer
             - ES7 React/Redux/GraphQL/React-Native snippets
-        
+        - Create React App
+            - To create a react project you can use one of the following ways. Let's assume you installed node. Open the command line interface (CLI), git bash or terminal on Mac or Linux. Then run the following command.
+                Asabeneh@DESKTOP-KGC1AKC MINGW64 ~/Desktop
+                $ npx create-react-app name-of-your-project
+            - If you do not like to write npx every time you create a project you may install create-react-app package globally in your computer using the following command.
+                Asabeneh@DESKTOP-KGC1AKC MINGW64 ~/Desktop
+                $ npm install -g create-react-app
+            - After you installed create-react-app, you create a React application as follows:
+                Asabeneh@DESKTOP-KGC1AKC MINGW64 ~/Desktop
+                $ create-react-app name-of-project
+    2. Your first React App
+        - React Boilerplate
+            - 
+            
                             
 
 
