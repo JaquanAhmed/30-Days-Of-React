@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 Days Of React Challenge</title>
+    <style>
+        h1, h2{
+            margin-left: 10px;
+            text-align: center;
+        }
+
+        h2, ul {
+            margin-top: -15px;
+        }
+
+        li {
+            margin: 10px;
+            color: azure;
+        }
+
+        html, body {
+            margin:0;
+            padding:0;
+        }
+
+        .main-wrapper{
+            background-color: rgb(27, 28, 39);
+            color: azure;
+            padding: 20px;
+        }
+
+        .footer-wrapper{
+            background-color: rgb(235, 110, 110);
+            color: aquamarine;
+            font-size: 40px;
+        }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const rootElement = document.querySelector('.root')
+        // Exercises: What is React?
+            // What is React?
+                // React is a JavaScript library for building user interfaces
+            // What is a library?
+                // A programming library is a collection of prewritten code that programmers can use to optimize tasks
+            // What is a single page application?
+                // An application which has only one HTML page
+            // What is a component?
+                // Components are independent and reusable bits of code
+            // What is the latest version of React?
+                // 18.2.0
+            // What is DOM?
+                // DOM is an acronym that stands for Document Object Model. It’s how a web browser represents a web page internally.
+                // The DOM determines what content should be on a page and how each element of the content relates to the other elements.
+            // What is React Virtual DOM?
+                // The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM.
+            // What does a web application or a website(composed of) have?
+                // A web application, or a website, is made of buttons, links, forms with different input fields, header, footer, sections, articles, texts, images, audios, videos and boxes with different shapes.
+        // Exercises: Why React?
+            // Why did you chose to use react?
+                // Because of the highjob opurunities
+            // What measures do you use to know popularity?
+                // GitHub repository stars, watchers and forks
+            // What is more popular, React or Vue?
+                // React
+        // Exercises: JSX
+            // What is an HTML element?
+                // An HTML element is a component of an HTML document that tells a web browser how to structure and interpret a part of the HTML document.
+            // How to write a self closing HTML element?
+                // We don't include a closing tag
+            // What is an HTML attribute? Write some of them
+                // HTML attributes provide additional information about HTML elements.
+                    // <img src="img_pteradactyl.jpg" width="500" height="600">
+            // What is JSX?
+                // JSX is an extension of JavaScript that allows us to write HTML elements with JavaScript code.
+            // What is babel?
+                // Babel is a library which transpiles JSX to pure JavaScript and latest JavaScript to older version.
+            // What is a transpiler?
+                // A transpiler is a program that translates a source code from a language to another at the same level of abstraction
+        // Exercises: JSX Elements
+            // What is a JSX element?
+                // A JSX element could be a single HTML element or many HTML elements wrapped in a parent HTML element.
+            // Write your name in a JSX element and store it in a name variable
+            const pet = <h1>Fox</h1>;
+            const petName = <h2> Sparky </h2>
+            // Write a JSX element which displays your full name, country, title, gender, email, phone number. Use h1 for the name and p for the rest of the information and store it in a user variable
+            const author = {
+                firstname : "Jaquan",
+                lastname : "Ahmed"
+            }
+            const country = "UK";
+            const title = "Mr";
+            const gender = "Male";
+            const email = "JaquanAhmed@Spacesaurus.com";
+            const phoneNumber = 123456789;
+
+            const header = (
+                <header> 
+                    <div className = 'header-wrapper'>
+                        <h1>{author.firstname} {author.lastname} </h1>
+                    </div>
+                </header>
+            )
+
+            const main = (
+                <div className = 'main-wrapper'>
+                    <ul>
+                        <li> Counrty: {country} </li>
+                        <li> Title: {title} </li>
+                        <li> Gender: {gender} </li>
+                        <li> Email: {email} </li>
+                        <li> Phone Number: {phoneNumber} </li>
+                    </ul>
+                </div>
+            )
+
+            // Write a footer JSX element
+            const footer = (
+                <footer>
+                    <div className = 'footer-wrapper'>
+                        <h2> This is the Footer </h2>
+                    </div>
+                </footer>
+            )
+
+
+        // Exercises: Inline Style
+            // Create a style object for the main JSX
+                // =^.^=
+            // Create a style object for the footer and app JSX
+                // =^.^=
+            // Add more styles to the JSX elements
+                // =^.^=
+        // Exercises: Internal Styles
+            // Apply different styles to your JSX elements
+                // =^.^=
+        // Exercise: Inject data to JSX
+            // Practice how to make JSX element and injecting dynamic data(string, number, boolean, array, object)
+                // =^.^=
+
+            const app = (
+                <div className = 'app'>
+                    {header}
+                    {main}
+                    {footer}
+                </div>
+            )
+
+            ReactDOM.render(app, rootElement)
+        </script>
+  </body>
+</html>

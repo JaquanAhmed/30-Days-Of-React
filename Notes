@@ -754,11 +754,49 @@ Day 2
                 )
                 //Without the header HTML element or any other parent HTML element the above JSX is invalid
         - To render a JSX element to HTML document, we should first create an index HTML. 
+        - The index.html is the only HTML file you will have in any React Application.
         - We can get started with React in two ways
             - by using CDN
             - by using create-react-app
                 - The create-react-app creates a React project boilerplate outbox.
-                        
+        - In the index.html file we have one div with a class root and script.
+            <div class="root"></div>
+            <script></script>
+        - The root div is the gateway to connect all react components to the index.html
+        - In the script tag we will write our JavaScript, but the script type will be babel.
+        - When NOT using create-react-app you will have to import React and ReactDOM using CDN or link aswell as babel
+            <script
+            crossorigin
+            src="https://unpkg.com/react@16/umd/react.development.js"
+            ></script>
+            <script
+            crossorigin
+            src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+            ></script>
+            <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+            <script type="text/babel">
+        - To render a JSX Element or HTML using React you first have to get the root element using document.querySelect('.root')
+            const rootElement = document.querySelector('.root')
+            // JSX element
+            const jsxElement = <h1>I am a JSX element</h1>
+            // we render the JSX element using the ReactDOM package
+            // ReactDOM has the render method and the render method takes two arguments
+            ReactDOM.render(jsxElement, rootElement)
+        - To add style to a JSX element we use inline style or className.
+            inline style example.
+                <header
+                style={{ border: '2px solid orange', color: 'black', fontSize: '18px' }}
+                >
+        - In JSX element we write className instead of class because class is a reserved word in JavaScript.
+        - className is used in styling more than ID in React.
+        - Injecting data to a JSX Element
+            - We can inject string, number, boolean, array data to JSX
+            - We cannot directly inject an object.
+            - We should extract object values first or destructure the content of the object before we inject the data to the JSX element.
+            - Example of inserting an array you want listed.
+                const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>)
+        
+                            
 
 
                 
