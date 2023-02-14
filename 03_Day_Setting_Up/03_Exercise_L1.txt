@@ -1,0 +1,44 @@
+What is a module?
+A single or multiple functions, that can be exported and imported when needed.
+
+What is package?
+A Package is a module or a collection of modules.
+
+What is the difference between a module and a package.
+A module is a single JavaScript file that has some reasonable functionality. A package is a directory with one or more modules inside of it and a package
+
+What is NPM?
+NPM is a package manager for Node. js packages, or modules if you like.
+
+What is Webpack?
+webpack is a module bundler
+
+How do you create a new React project?
+npx create-react-app name-of-your-project
+
+What are the files and folders inside a project folder(package.json, package-lock.json or yarn.lock, .gitignore,node_modules and public)?
+- node_modules - stores all the necessary node packages of the React applications.
+                - Public
+                    - index.html - the only HTML file we have in the entire application
+                    - favicon.ico - an icon file
+                    - manifest.json - is used to make the application a progressive web app
+                    - other images - open graph images(open graph images are images which are visible when a link share on social media) 
+                    - robots.txt - information, if the website allows web scraping
+                - src
+                    - App.css, index.css - are different CSS files
+                    - index.js - a file which allows to connect all the components with index.html
+                    - App.js - A file where we usually import most of the presentational components
+                    - serviceWorker.js: is used to add progressive web app features
+                    - setupTests.js - to write testing cases
+                - package.json- List of packages the applications uses
+                - .gitignore - React boilerplate comes with git initiated, and the .gitingore allows files and folders not to be pushed to GitHub
+                - README.md - Markdown file to write documentation
+                - yarn.lock or package-lock.json - a means to lock the version of the package
+
+What is your favorite code editor (I believe that it is Visual Studio Code)?
+Visual Studio Code
+
+Add different Visual Studio Code extensions to improve your productivity(eg. prettier, ESLint etc).
+=^.^=
+
+Try to make a different custom module in a different file and import it to index.js.
