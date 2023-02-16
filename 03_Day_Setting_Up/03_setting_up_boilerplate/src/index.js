@@ -7,6 +7,9 @@ import asabenehImage from './images/asabeneh.jpg'
 // to import the doSomeMath from the math.js with or without extension
 import doSomeMath from './math.js'
 
+//import cat
+import thisIsCat from './cat.js'
+
 // to import the other modules
 // since these modules were not exported as default we have to desctructure
 import { addTwo, multiply, subtract } from './math.js'
