@@ -3,6 +3,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 // To get the root element from the HTML document
 import asabenehImage from './images/asabeneh.jpg'
+import cssLogo from './images/css_logo.png'
+import htmlLogo from './images/html_logo.png'
+import javascriptLogo from './images/javascript_logo.png'
+import reactLogo from './images/react_logo.png'
+
 
 // to import the doSomeMath from the math.js with or without extension
 import doSomeMath from './math.js'
@@ -75,11 +80,36 @@ const user = (
   </div>
 )
 
+//level 2 Exercise 1
+const frontendtechs = (
+  <div className='frontEndTechnologies'>
+    <strong> Front End Technologies </strong>
+    <br></br>
+    <img style = {{ width: 200, height: 200, padding: 25}} src={htmlLogo} alt='html logo' />
+    <img style = {{ width: 200, height: 200, padding: 25}} src={cssLogo} alt='css logo' />
+    <img style = {{ width: 200, height: 200, padding: 25}} src={javascriptLogo} alt='javascript logo' />
+    <img style = {{ width: 200, height: 200, padding: 25}} src={reactLogo} alt='react logo' />
+  </div>
+)
+
+//level 2 exercise 2
+const subscribe = (
+  <div className = 'subscribe'>
+    <h1>SUBSCRIBE</h1>
+    <p>Sign up with your email address to receive news and updates.</p>
+    <input type="text" name="firstName" placeholder='First name'/>
+    <input type="text" name="lastName" placeholder='Last name'/>
+    <input type="email" name="email" placeholder='Email'/>
+    <br></br>
+    <button>Subscribe</button>
+  </div>
+)
+
 // JSX element, main
 const main = (
   <main>
     <div className='main-wrapper'>
-      <p>
+      {/* <p>
         Prerequisite to get started{' '}
         <strong>
           <em>react.js</em>
@@ -89,7 +119,9 @@ const main = (
       <ul>{techsFormatted}</ul>
       {result}
       {personAge}
-      {user}
+      {user} */}
+      {frontendtechs}
+      {subscribe}
     </div>
   </main>
 )
