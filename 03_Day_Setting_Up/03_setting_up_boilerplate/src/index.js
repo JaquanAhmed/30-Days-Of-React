@@ -36,21 +36,6 @@ const author = {
 }
 const date = 'Oct 2, 2020'
 
-// JSX element, header
-const header = (
-  <header>
-    <div className='header-wrapper'>
-      <h1>{welcome}</h1>
-      <h2>{title}</h2>
-      <h3>{subtitle}</h3>
-      <p>
-        Instructor: {author.firstName} {author.lastName}
-      </p>
-      <small>Date: {date}</small>
-    </div>
-  </header>
-)
-
 const numOne = 3
 const numTwo = 2
 
@@ -75,7 +60,7 @@ const techs = ['HTML', 'CSS', 'JavaScript']
 const techsFormatted = techs.map((tech) => <li>{tech}</li>)
 
 const user = (
-  <div>
+  <div className='userImage'>
     <img src={asabenehImage} alt='asabeneh image' />
   </div>
 )
@@ -105,6 +90,26 @@ const subscribe = (
   </div>
 )
 
+//level 3
+const skills = ['HTML', 'CSS', 'Sass', 'JS', 'React', 'Redux', 'Node', 'MongoDB', 'Python', 'Flask', 'Django', 'NumPY', 
+'Pandas', 'Data Analysis', 'MYSQL', 'GraphGL', 'D3.js', 'Gatsby', 'Docker', 'Heroku', 'Git']
+const skillsFormatted = skills.map((skill) => <h3>{skill}</h3>)
+
+// JSX element, header
+const header = (
+  <header>
+    <div className='header-wrapper'>
+      {/* <h1>{welcome}</h1>
+      <h2>{title}</h2>
+      <h3>{subtitle}</h3>
+      <p>
+        Instructor: {author.firstName} {author.lastName}
+      </p>
+      <small>Date: {date}</small> */}
+    </div>
+  </header>
+)
+
 // JSX element, main
 const main = (
   <main>
@@ -119,9 +124,15 @@ const main = (
       <ul>{techsFormatted}</ul>
       {result}
       {personAge}
-      {user} */}
+      {user}
       {frontendtechs}
-      {subscribe}
+      {subscribe}*/}
+      {user}
+      <h1><strong>{author.firstName.toUpperCase()} {author.lastName.toUpperCase()} <span>&#10004;</span></strong></h1>
+      <p>Senior Developer, Finland</p>
+      <h2><strong>SKILLS</strong></h2>
+      <span>{skillsFormatted}</span>
+      <p>Joined on August 30, 2020</p>
     </div>
   </main>
 )
@@ -132,7 +143,7 @@ const copyRight = 'Copyright 2020'
 const footer = (
   <footer>
     <div className='footer-wrapper'>
-      <p>{copyRight}</p>
+      {/* <p>{copyRight}</p> */}
     </div>
   </footer>
 )
@@ -140,9 +151,9 @@ const footer = (
 // JSX element, app
 const app = (
   <div className='app'>
-    {header}
+    {/* {header} */}
     {main}
-    {footer}
+    {/* {footer} */}
   </div>
 )
 
