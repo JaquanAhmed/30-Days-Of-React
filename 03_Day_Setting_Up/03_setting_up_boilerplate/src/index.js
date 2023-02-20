@@ -8,6 +8,9 @@ import htmlLogo from './images/html_logo.png'
 import javascriptLogo from './images/javascript_logo.png'
 import reactLogo from './images/react_logo.png'
 
+//To get react-icon
+import { FaCheckCircle } from "react-icons/fa";
+import { FaRegClock } from "react-icons/fa";
 
 // to import the doSomeMath from the math.js with or without extension
 import doSomeMath from './math.js'
@@ -93,7 +96,11 @@ const subscribe = (
 //level 3
 const skills = ['HTML', 'CSS', 'Sass', 'JS', 'React', 'Redux', 'Node', 'MongoDB', 'Python', 'Flask', 'Django', 'NumPY', 
 'Pandas', 'Data Analysis', 'MYSQL', 'GraphGL', 'D3.js', 'Gatsby', 'Docker', 'Heroku', 'Git']
+
 const skillsFormatted = skills.map((skill) => <h3>{skill}</h3>)
+
+const checkStyle = {color: "cyan", fontSize: "medium", backgroundColor: "white", verticalAlign: "middle"};
+const clockStyle = {color: "black", fontSize: "small", backgroundColor: "white", verticalAlign: "middle"};
 
 // JSX element, header
 const header = (
@@ -128,11 +135,11 @@ const main = (
       {frontendtechs}
       {subscribe}*/}
       {user}
-      <h1><strong>{author.firstName.toUpperCase()} {author.lastName.toUpperCase()} <span>&#10004;</span></strong></h1>
+      <h1><strong>{author.firstName.toUpperCase()} {author.lastName.toUpperCase()} <FaCheckCircle style = {checkStyle}/></strong></h1>
       <p>Senior Developer, Finland</p>
       <h2><strong>SKILLS</strong></h2>
       <span>{skillsFormatted}</span>
-      <p>Joined on August 30, 2020</p>
+      <p><FaRegClock style = {clockStyle}/> Joined on August 30, 2020</p>
     </div>
   </main>
 )
