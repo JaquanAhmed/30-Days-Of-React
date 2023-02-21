@@ -880,19 +880,77 @@ Day 3
                 - ReactDOM has a render method.
                     import React from 'react'
                     import ReactDOM from 'react-dom'
-            
-
-                
-                
-            
-                            
 
 
-                
-            
-                
 
-        
-        
-
-
+Day 4
+    1. Components
+        - A React component is a small, reusable code, which is responsible for one part of the application UI.
+        - A React application is an aggregation of components.
+        - In React we assemble different components together to create an application.
+        - We use JavaScript functions or classes to make components.
+        - If we use a function, the component will be a functional component, but if we use a class, the component will be a class-based component.
+        - Components can be:
+            - Functional Component / Presentational Component / Stateless Component / Dumb Component
+            - Class Component / Container Component/ Statefull Component / Smart Component
+        - The classification of components above does not work for the latest version of React
+        - Components in React are JavaScript functions or classes, that return a JSX.
+        - Component name must start with an uppercase, and if the name is two words, it should be CamelCase - a camel with two humps.
+        - Creating React Component
+            - Functional Component
+                - Using a JavaScript function, we can make a functional React component.
+                    // React component syntax
+                    // it can be arrow function, function declaration or function expression
+                    const jsx = <tag> Content </tag>
+                    const ComponentName = () => {
+                      return jsx
+                    }
+            - Rendering components
+                - rendering just the header
+                    ReactDOM.render(<Header />, rootElement)
+                - rendering the full application.
+                    ReactDOM.render(<App />, rootElement)
+        - Injecting data to JSX in React Component
+            - To inject data to a JSX we use the {} bracket.
+                import React from 'react'
+                import ReactDOM from 'react-dom'
+                const welcome = 'Welcome to 30 Days Of React'
+                const title = 'Getting Started React'
+                const subtitle = 'JavaScript Library'
+                const firstName = 'Asabeneh'
+                const lastName = 'Yetayeh'
+                const date = 'Oct 3, 2020'
+                // JSX element, header
+                const header = () => {
+                return (
+                    <header>
+                    <div className='header-wrapper'>
+                        <h1>{welcome}</h1>
+                        <h2>{title}</h2>
+                        <h3>{subtitle}</h3>
+                        <p>
+                        Instructor: {firstName} {lastName}
+                        </p>
+                        <small>Date: {date}</small>
+                    </div>
+                    </header>
+                )
+                }
+                const rootElement = document.getElementById('root')
+                // we render the App component using the ReactDOM package
+                ReactDOM.render(<Header />, rootElement)
+        - Further on Functional components
+            - A component that returns only a single HTML as JSX is considered as a small component.
+                - A button component or an alert box component, or just an input field component.
+                    const buttonStyles = {
+                        padding: '10px 20px',
+                        background: 'rgb(0, 255, 0',
+                        border: 'none',
+                        borderRadius: 5,
+                    }
+                    const Button = () => <button style={buttonStyles}> action </button>
+                - The Button component is made of a single HTML button element.
+                - All CSS properties should be camelCase to make a JavaScript CSS object. 
+                - If we pass a number without unit as CSS value, it is considered as px.
+                - The Button component is a dumb component, because it does not take any parameters and we cannot change the action text dynamically.
+                - We need to pass props to the button, to change the value dynamically.
