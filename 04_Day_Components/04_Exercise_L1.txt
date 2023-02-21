@@ -1,0 +1,52 @@
+What is the difference between a regular function and an arrow function?
+    - Syntax
+        - A programmer can get the same result as regular functions by writing a few lines of code using arrow functions.
+    - Arguments binding
+        - arguments object inside the regular functions contains the list of arguments.
+        - The arrow function, on the opposite, doesn’t define arguments i.e. they do not have arguments binding.
+        - But you can easily access the arrow function arguments using a rest parameter ...args.
+    - Use of this keyword
+        - Inside of a regular JavaScript function, this value is dynamic. The dynamic context means that the value of this depends on how the function is invoked.
+        - The behavior of this inside of an arrow, function differs considerably from the regular function’s this behavior as an arrow function does not have its own “this” keyword.
+    - Using a new keyword
+        - Regular functions are constructible and callable. They can be called using the new keyword.
+        - But, the arrow functions are only callable and not constructible, i.e., arrow functions can never be used as constructor functions.
+
+What is a React Component?
+    - A React component is a small, reusable code, which is responsible for one part of the application UI.
+
+How do you make a React functional component?
+    - We turn the JSX element in to a function.
+
+What is the difference between a pure JavaScript function and a functional component?
+    - A functional component is just a plain JavaScript function which accepts props as an argument and returns a React element.
+
+How small is a React component?
+    - A component that returns only a single HTML as JSX is considered as a small component.
+
+Can we make a button or input field component?
+    - const Button = () => <button>action</button>
+
+Make a reusable Button component.
+    const buttonStyles = {
+        padding: '10px 20px',
+        background: 'rgb(0, 255, 0',
+        border: 'none',
+        borderRadius: 5,
+    }
+    const Button = () => <button style={buttonStyles}> action </button>
+
+Make a reusable InputField component.
+    const inputDefualt = {
+        type = "text",
+        border: 'none',
+        borderRadius: 5,
+        backgroundColor: "blue"
+    }
+    const Input = () => <input style = {inputDefualt}> </input>
+
+Make a reusable alert box component with one div parent element and one p child element of the div(warning alert box, success alert box).
+    const alert = () =>
+        <div class="alert">
+            <p>This is an alert box.</p>
+        </div>
