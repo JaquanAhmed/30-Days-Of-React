@@ -954,3 +954,4 @@ Day 4
                 - If we pass a number without unit as CSS value, it is considered as px.
                 - The Button component is a dumb component, because it does not take any parameters and we cannot change the action text dynamically.
                 - We need to pass props to the button, to change the value dynamically.
+        - `${object name}` can be used instead of document.getElementById("object name")
