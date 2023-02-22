@@ -99,7 +99,7 @@ const skills = ['HTML', 'CSS', 'Sass', 'JS', 'React', 'Redux', 'Node', 'MongoDB'
 
 const skillsFormatted = skills.map((skill) => <h3>{skill}</h3>)
 
-const checkStyle = {color: "cyan", fontSize: "medium", backgroundColor: "white", verticalAlign: "middle"};
+const checkStyle = {color: "deepskyblue", fontSize: "medium", backgroundColor: "white", verticalAlign: "middle"};
 const clockStyle = {color: "black", fontSize: "small", backgroundColor: "white", verticalAlign: "middle"};
 
 // JSX element, header
