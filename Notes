@@ -956,3 +956,64 @@ Day 4
                 - We need to pass props to the button, to change the value dynamically.
         - `${object name}` can be used instead of document.getElementById("object name")
         - React components have to start with a capital letter.
+
+
+
+Day 5
+    1. Props
+        - What is props?
+            - Props is a special keyword in React that stands for properties and is being used to pass data from one component to another.
+            - mostly from parent component to child component. 
+            - Props are to components what parameters are to functions
+        - Props object
+            - React props is an object which you get instantly when you create a React component.
+            - you would get an empty object({}) if you console.log(props).
+            - That means if you do not pass any attributes or properties when you instantiate the component, the props will be empty.
+            - Otherwise it will be populated with the data you passed as attributes and the proper name of these attributes are props.
+            - A component can have one or many props. 
+            - Props could be different data types. 
+            - It could be a string, number, boolean, array, object or a function
+        - Different data type props
+            - String props type
+                // Header Component
+                const Header = (props) => {
+                console.log(props)
+                return (
+                    <header>
+                    <div className='header-wrapper'>
+                        <h1>{props.welcome}</h1>
+                        <h2>{props.title}</h2>
+                        <h3>{props.subtitle}</h3>
+                        <p>
+                        {props.firstName} {props.lastName}
+                        </p>
+                        <small>{props.date}</small>
+                    </div>
+                    </header>
+                )
+                }
+                // The App, or the parent or the container component
+                // Functional Component
+                const App = () => (
+                <div className='app'>
+                    <Header
+                    welcome='Welcome to 30 Days Of React'
+                    title='Getting Started React'
+                    subtitle='JavaScript Library'
+                    firstName='Asabeneh'
+                    lastName='Yetayeh'
+                    date='Oct 4, 2020'
+                    />
+                </div>
+                )
+                // Output
+                {
+                    firstName: "Asabeneh",
+                    lastName: "Yetayeh",
+                    date: "Oct 4, 2020"
+                    subtitle: "JavaScript Library"
+                    title: "Getting Started React"
+                    welcome: "Welcome to 30 Days Of React"
+                }
+                - As you can see from the above example, the value of the props are written statically.
+                - To apply some logic to the props it will be better to use a variable as props.
