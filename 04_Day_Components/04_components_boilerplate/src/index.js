@@ -51,7 +51,7 @@ const skillsFormatted = skills.map((skill) => <h4>{skill}</h4>)
 const UserCard = () => (
   <div className='user-card'>
     <img src={asabenehImage} alt='asabeneh image' />
-    <h2><strong> Asabeneh Yetayeh <FaCheckCircle style = {{color: "cyan", fontSize: "medium", backgroundColor: "white", verticalAlign: "middle"}}/></strong></h2>
+    <h2><strong> Asabeneh Yetayeh <FaCheckCircle style = {{color: "deepskyblue", fontSize: "medium", backgroundColor: "white", verticalAlign: "middle"}}/></strong></h2>
   </div>
 )
 
