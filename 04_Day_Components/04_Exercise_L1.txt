@@ -25,28 +25,25 @@ How small is a React component?
     - A component that returns only a single HTML as JSX is considered as a small component.
 
 Can we make a button or input field component?
-    - const Button = () => <button>action</button>
+    const Button = () => <button>action</button>
 
 Make a reusable Button component.
-    const buttonStyles = {
-        padding: '10px 20px',
-        background: 'rgb(0, 255, 0',
-        border: 'none',
-        borderRadius: 5,
-    }
-    const Button = () => <button style={buttonStyles}> action </button>
+    const Button = ({width, height, backgroundColor, color, border, borderColor, fontSize, buttonText}) => (
+        <button style = {{width, height, backgroundColor, color, border, borderColor, fontSize}}> 
+            {buttonText}
+        </button>
+    )
 
 Make a reusable InputField component.
-    const inputDefualt = {
-        type = "text",
-        border: 'none',
-        borderRadius: 5,
-        backgroundColor: "blue"
+    const Input = ({width, height, backgroundColor, color, border, borderColor, fontSize, placeholder}) => { 
+        return (
+        <input style = {{width, height, backgroundColor, color, border, borderColor, fontSize, placeholder}}> </input>
+        )
     }
-    const Input = () => <input style = {inputDefualt}> </input>
 
 Make a reusable alert box component with one div parent element and one p child element of the div(warning alert box, success alert box).
-    const alert = () =>
-        <div class="alert">
-            <p>This is an alert box.</p>
+    const alert = ({className, backgroundColor, color, fontSize, borderRadius, message}) => (
+        <div className = {className} style = {{backgroundColor, color, fontSize, borderRadius }}>
+            <p>{message}</p>
         </div>
+    )
