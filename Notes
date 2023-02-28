@@ -1039,4 +1039,41 @@ Day 5
                     </div>
                     )
                 }
-            - 
+            - Boolean props type
+                const Status = (props) => {
+                    // ternary operator to check the status of the person
+                    let status = props.status ? 'Old enough to drive' : 'Too young for driving'
+                    return <p>{status}</p>
+                }
+                
+                // The App, or the parent or the container component
+                // Functional Component
+                const App = () => {
+                    let currentYear = 2020
+                    let birthYear = 2015
+                    const age = currentYear - birthYear // 15 years
+                
+                    let status = age >= 18
+                
+                    return (
+                    <div className='app'>
+                        <Status status={status} />
+                    </div>
+                    )
+                }
+            - Array props type
+                - In programming arrays and objects are the most frequently used data structure to solve different problems and store data in a more structured way. 
+                - Therefore, we encounter data in the form of an array quite often.
+                // Skills Component
+                const Skills = (props) => {
+                // modifying the skills array
+                    const skillList = props.skills.map((skill) => <li>{skill}</li>)
+                    return <ul>{skillList}</ul>
+                }
+                const App = () => (
+                    <div className='app'>
+                        <Skills skills={['HTML', 'CSS', 'JavaScript']} />
+                    </div>
+                )
+            - Object props type
+                
